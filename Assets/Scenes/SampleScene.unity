@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17627993, g: 0.22062704, b: 0.3029498, a: 1}
+  m_IndirectSpecularColor: {r: 0.17628002, g: 0.22062694, b: 0.3029498, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -344,10 +344,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5907455258454302803, guid: 166f63bd98a2da843911136e981289cb, type: 3}
-  minDistance: 50
+  minDistance: 25
   spawnDelay: 5
-  maxX: 100
-  maxZ: 100
+  maxX: 50
+  maxZ: 50
   projectileShooter: {fileID: 1475576700}
 --- !u!4 &761886034
 Transform:
@@ -414,10 +414,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 1
-  far clip plane: 100
+  far clip plane: 107.6
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

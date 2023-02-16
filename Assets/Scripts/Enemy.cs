@@ -28,4 +28,14 @@ public class Enemy : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(projectedDirection, transform.up);
         }
     }
+
+    void OnCollisionEnter(Collision other) 
+    {
+        var bombCheck = other.gameObject.GetComponent<Bomb>();
+        if(bombCheck != null)
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }  
+    }
 }
