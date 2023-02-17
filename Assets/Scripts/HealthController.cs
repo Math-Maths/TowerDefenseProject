@@ -37,7 +37,8 @@ public class HealthController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             // Quando o projectile shooter colide com um inimigo, chama o método TakeDamage do script HealthController
-            healthController.TakeDamage(5);
+            TakeDamage(5);
+            Destroy(other.gameObject);
         }
     }
 }
