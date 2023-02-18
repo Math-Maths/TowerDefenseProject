@@ -37,13 +37,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other) 
+    void OnTriggerEnter(Collider other) 
     {
-        var bombCheck = other.gameObject.GetComponent<Bomb>();
-        if(bombCheck != null)
+        if(other.gameObject.CompareTag("Player"))  
         {
-            Destroy(other.gameObject);
             Destroy(gameObject);
-        }  
+        }
     }
 }

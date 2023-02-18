@@ -38,7 +38,6 @@ public class HealthController : MonoBehaviour
         {
             // Quando o projectile shooter colide com um inimigo, chama o método TakeDamage do script HealthController
             TakeDamage(5);
-            Destroy(other.gameObject);
         }
     }
 }

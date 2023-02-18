@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    public GameObject explosionPrefab;
+
+    public LayerMask explosionLayer;
+
+    public Vector3 scaleIndex = new Vector3(1,1,1);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +20,15 @@ public class Bomb : MonoBehaviour
     void Update()
     {
         if(transform.position.y < -10) Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider other) 
+    {
+        if(explosionLayer != (explosionLayer | (1 << other.gameObject.layer)))
+        {
+            GameObject explosionSize = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            explosionSize.transform.localScale= scaleIndex;
+            Destroy(gameObject);
+        }
     }
 }
