@@ -30,5 +30,7 @@ public class Bomb : MonoBehaviour
             explosionSize.transform.localScale= scaleIndex;
             Destroy(gameObject);
         }
+
+        
     }
 }
