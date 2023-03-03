@@ -229,21 +229,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7582581347906184848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844842838294373414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1493cccb13d52884c83a14fcfbcef5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyPrefab: {fileID: 4173895688141537484, guid: 0fb6ecb23eb3bde49886553d19b055da, type: 3}
-  Bomb: {fileID: 0}
-  DestroyTransform: {fileID: 1699753939218090736}
 --- !u!114 &7002725707306721740
 MonoBehaviour:
   m_ObjectHideFlags: 0
