@@ -17,7 +17,7 @@ public class ProjectileShooter : MonoBehaviour
         groundPlane = new Plane(Vector3.up, Vector3.zero);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Input.GetMouseButtonDown(0) && Time.time > lastFireTime + fireDelay)
         {

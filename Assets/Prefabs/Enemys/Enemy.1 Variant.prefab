@@ -47,7 +47,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2057661155483120969, guid: b67e7818c3a60a140ba62a81130ba330, type: 3}
   shootingDistance: 5
   shootingDelay: 2
-  arcHeight: 12
+  arcHeight: 8
   speed: 10
   canShoot: 0
 --- !u!1 &239871708487979013
@@ -229,22 +229,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7002725707306721740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844842838294373414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4366e295c4eb94da3a30d7f6378984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3.5
-  stopDistance: 8
-  projectileShooter: {fileID: 0}
-  cannon: {fileID: 1026520204}
 --- !u!114 &1765242985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +243,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 2
   outlineColor: {r: 1, g: 0.23113209, b: 0.23113209, a: 1}
-  outlineWidth: 6
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &7002725707306721740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844842838294373414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4366e295c4eb94da3a30d7f6378984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.5
+  stopDistance: 10
+  projectileShooter: {fileID: 0}
+  cannon: {fileID: 1026520204}
