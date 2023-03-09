@@ -27,7 +27,7 @@ public class Bomb : MonoBehaviour
         if(explosionLayer != (explosionLayer | (1 << other.gameObject.layer)))
         {
             GameObject explosionSize = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            explosionSize.transform.localScale= scaleIndex;
+            explosionSize.transform.localScale = scaleIndex;
             Destroy(gameObject);
         }
 

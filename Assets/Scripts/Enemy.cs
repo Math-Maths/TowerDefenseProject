@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         plane = new Plane(transform.up, transform.position);
+        projectileShooter = GameObject.Find("Tower").GetComponent<Transform>();
     }
 
     private void Update()
