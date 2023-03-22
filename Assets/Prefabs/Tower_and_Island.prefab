@@ -79,6 +79,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  ActiveCanvas: {fileID: 0}
+  DelayGameOver: 1.5
+  DelayTowerDestroy: 3
 --- !u!1 &2347441182790616961
 GameObject:
   m_ObjectHideFlags: 0
