@@ -32,7 +32,7 @@ public class Menu : MonoBehaviour
 
    public void OpenOptions()
    {
-        MainMenu.SetActive(false);
+        // MainMenu.SetActive(false);
         Options.SetActive(true);
    }
 
@@ -44,6 +44,6 @@ public class Menu : MonoBehaviour
    void TweenOptions()
    {
         Options.SetActive(false);
-        MainMenu.SetActive(true);
+        //MainMenu.SetActive(true);
    }
 }

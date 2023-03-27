@@ -14,6 +14,7 @@ public class OpenSettings : MonoBehaviour
     void Start()
     {
         canvasGroup = BlackBGSet.GetComponent<CanvasGroup>();
+       
         canvasGroup.alpha = 0;
     }
 
@@ -28,11 +29,11 @@ public class OpenSettings : MonoBehaviour
         Vector3 finalPosition = new Vector3(0f, 0f, 0f); 
 
         // Define a posição inicial do objeto abaixo da tela
-        Vector3 startPosition = new Vector3(0f, -Screen.height/2f, 0f); 
+        Vector3 startPosition = new Vector3(0f, -Screen.height/1f, 0f); 
 
         // Move o objeto de sua posição inicial para sua posição final com a animação desejada
         SetWindow.transform.localPosition = startPosition;
-        SetWindow.LeanMoveLocal(finalPosition, 0.5f).setEaseOutExpo().delay = 0.1f;
+        SetWindow.LeanMoveLocal(finalPosition, 1.0f).setEaseOutExpo().delay = 0.1f;
     }
 
     public void PlayOnBackButton()
@@ -43,7 +44,7 @@ public class OpenSettings : MonoBehaviour
         Vector3 finalPosition = new Vector3(0f, 0f, 0f); 
         // Move o objeto para baixo no eixo Y
         SetWindow.LeanMoveLocalY(-Screen.height, 1.0f).setEaseInExpo();
-        Invoke("DesactiveBlackBG", 2.0f);
+        Invoke("DesactiveBlackBG", 1.5f);
     }
 
     void DesactiveBlackBG()
