@@ -152,9 +152,13 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2408062297720775218, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
+      propertyPath: m_Name
+      value: Enemy_1_Base_Cannon
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
       propertyPath: m_Name
-      value: Enemy.1 Variant
+      value: Enemy_1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
       propertyPath: m_TagString
@@ -163,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 8129570289260617029, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622990723296700470, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
+      propertyPath: m_Name
+      value: Enemy_1_Cabin
       objectReference: {fileID: 0}
     - target: {fileID: 8960702165007904201, guid: 6448e9d27b3c7234f88389f756c3bd0f, type: 3}
       propertyPath: m_ReceiveShadows
@@ -207,8 +215,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.482768, y: 1.5677888, z: 5.3823986}
-  m_Center: {x: 0, y: 0.54088277, z: -0.52821875}
+  m_Size: {x: 3.2763019, y: 0.9422907, z: 5.7891455}
+  m_Center: {x: 0.03606955, y: 0.2072758, z: -0.5289956}
 --- !u!95 &-4136800804719633573
 Animator:
   serializedVersion: 4

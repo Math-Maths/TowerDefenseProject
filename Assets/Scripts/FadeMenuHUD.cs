@@ -6,7 +6,7 @@ public class FadeMenuHUD : MonoBehaviour
 {
     public CanvasGroup logoTitle;
     public CanvasGroup mainMenu;
-    public float animationDuration = 1f;
+    public float animationDuration = 2f;
 
     public void PlayOnOptions()
     {
@@ -18,8 +18,8 @@ public class FadeMenuHUD : MonoBehaviour
         float finalAlpha = 0;
 
         // Cria e inicia a animação usando LeanTween
-        LeanTween.alphaCanvas(mainMenu, finalAlpha, animationDuration);
         LeanTween.alphaCanvas(logoTitle, finalAlpha, animationDuration);
+        LeanTween.alphaCanvas(mainMenu, finalAlpha, animationDuration);
     }
 
     public void PlayOnBackButton()
@@ -32,7 +32,7 @@ public class FadeMenuHUD : MonoBehaviour
         float finalAlpha = 1;
 
         // Cria e inicia a animação usando LeanTween
-        LeanTween.alphaCanvas(mainMenu, finalAlpha, animationDuration);
-        LeanTween.alphaCanvas(logoTitle, finalAlpha, animationDuration);
+        LeanTween.alphaCanvas(logoTitle, finalAlpha, animationDuration).setDelay(1.0f);
+        LeanTween.alphaCanvas(mainMenu, finalAlpha, animationDuration).setDelay(1.1f);
     }
 }

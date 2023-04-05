@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (timeUntilNextSpawn <= 0)
         {
-            Vector3 randomPosition = new Vector3(Random.Range(-maxX, maxX), 0, Random.Range(-maxZ, maxZ));
+            Vector3 randomPosition = new Vector3(Random.Range(-maxX, maxX), 0.6f, Random.Range(-maxZ, maxZ));
 
             // Verificar se a distância mínima entre a posição aleatória e o spawner é suficiente
             float distance = Vector3.Distance(randomPosition, transform.position);

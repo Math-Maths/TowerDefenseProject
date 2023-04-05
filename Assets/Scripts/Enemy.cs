@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))  
         {
+            ScoreControl.Score += 50;   
             Destroy(gameObject);
         }
     }

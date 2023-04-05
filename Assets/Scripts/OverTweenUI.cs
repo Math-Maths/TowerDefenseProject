@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class OverTweenUI : MonoBehaviour
 {
     [SerializeField] GameObject blurImage, blackBGOver, strip, MainMenu, restartButton, returnButton,
-    stripShadow, scoreBox, scoreTxt, star1, star2, star3, lightBlur, rayWheel;
+    stripShadow, scoreBox, scoreTxt, scoreValue, star1, star2, star3, lightBlur, rayWheel;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -14,17 +14,18 @@ public class OverTweenUI : MonoBehaviour
         LeanTween.alpha(blurImage.GetComponent<RectTransform>(), 1f, 2f);
         LeanTween.alpha(blackBGOver.GetComponent<RectTransform>(), 0.8f, 3f);
         LeanTween.scale(strip, new Vector3(1.0f, 1.0f, 1.0f),2f).setDelay(.5f).setEase(LeanTweenType.easeOutElastic).setOnComplete(LevelOnComplete);
-        LeanTween.moveLocal(strip, new Vector3(0f, 650f, 0f),2f).setDelay(2f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.moveLocal(strip, new Vector3(0f, 625f, 0f),2f).setDelay(2f).setEase(LeanTweenType.easeInOutCubic);
     }
 
     void LevelOnComplete()
     {
         LeanTween.moveLocal(MainMenu, new Vector3(0f, 0f, 0f), 1f).setDelay(.5f).setEase(LeanTweenType.easeOutCirc).setOnComplete(StarsAnimation);
-        LeanTween.scale(returnButton, new Vector3(1f, 1f, 1f), 2f).setDelay(.8f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(restartButton, new Vector3(1f, 1f, 1f), 2f).setDelay(.8f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.scale(scoreTxt, new Vector3(1f, 1f, 1f), 2f).setDelay(1.5f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.alpha(scoreBox.GetComponent<RectTransform>(), 1f, .5f).setDelay(1.5f);
-        LeanTween.alpha(stripShadow.GetComponent<RectTransform>(), 1f, 2f).setDelay(1.5f);
+        LeanTween.scale(returnButton, new Vector3(1f, 1f, 1f), 2f).setDelay(3.8f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(restartButton, new Vector3(1f, 1f, 1f), 2f).setDelay(3.8f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.scale(scoreTxt, new Vector3(1f, 1f, 1f), 2f).setDelay(2.5f).setEase(LeanTweenType.easeOutElastic);
+        LeanTween.alpha(scoreBox.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
+        LeanTween.alpha(scoreValue.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
+        LeanTween.alpha(stripShadow.GetComponent<RectTransform>(), 1f, 3f).setDelay(1.5f);
     }
 
     void StarsAnimation()
