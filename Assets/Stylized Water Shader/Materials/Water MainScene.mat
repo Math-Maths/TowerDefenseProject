@@ -62,9 +62,9 @@ Material:
     - _Lighting_Smoothness: 0.228
     - _Normals_Scale: 0.2
     - _Normals_Speed: 0.073
-    - _Normals_Strength: 0.277
+    - _Normals_Strength: 0.335
     - _QueueControl: 1
-    - _QueueOffset: 0
+    - _QueueOffset: 50
     - _Refraction_Scale: 0.226
     - _Refraction_Speed: 0.053
     - _Refraction_Strength: 0.0082
