@@ -8,9 +8,6 @@ public class Enemy : MonoBehaviour
     public Plane plane;
     public EnemyShooter cannon;
 
-    [SerializeField]
-    GameObject shateredEnemy;
-
     private void Start()
     {
         plane = new Plane(transform.up, transform.position);
@@ -45,8 +42,7 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))  
         {
-            ScoreControl.Score += 50;
-            Instantiate(shateredEnemy, transform.position, transform.rotation);   
+            ScoreControl.Score += 50;   
             Destroy(gameObject);
         }
     }
