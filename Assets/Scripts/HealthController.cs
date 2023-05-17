@@ -11,6 +11,10 @@ public class HealthController : MonoBehaviour
     public float DelayTowerDestroy = 3.0f;
     [SerializeField] private LifeBarControl lifeBar;
     
+    //Controle da animação da camera ao morrer
+    public GameObject mainCamera;
+    public Animator animator;
+    
 
     private void Start()
     {
@@ -29,10 +33,13 @@ public class HealthController : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            // Chama a tela de GameOver com base no tempo definido.
+            // Chama a tela de GameOver com base no tempo definido
             Invoke("ActiveGameOver", DelayGameOver);
-            // Se a vida chegar a 0, o projectile shooter é destruído. 
-            Invoke("DestroyObject", DelayTowerDestroy);  
+            // Se a vida chegar a 0, o projectile shooter é destruído 
+            Invoke("DestroyObject", DelayTowerDestroy);
+            //Chama a animação de FadeOut da câmera
+            Invoke("CameraZoomIn", .5f);
+            
         }
     }
 
@@ -43,6 +50,12 @@ public class HealthController : MonoBehaviour
     void ActiveGameOver()
     {
         ActiveCanvas.SetActive(true);
+    }
+
+    //Método para afastar a câmera no eixo Z local
+    void CameraZoomIn()
+    {
+        animator.SetTrigger("CameraFadeIn");
     }
 
     public void Heal(int amount)
