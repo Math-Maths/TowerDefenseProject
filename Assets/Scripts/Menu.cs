@@ -7,14 +7,11 @@ public class Menu : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject Options;
-    public Animator animator;
  
-    public void LoadMainScene()
+    public void LoadMainScene() 
     {
         // Vai executar a cena de Gameplay após um Delay
         Invoke("LoadMyScene", 2f);
-        animator.SetBool("LoopCheck", true);
-        animator.SetTrigger("PlayFadeOut");
     }
     void LoadMyScene() 
     {
@@ -24,12 +21,7 @@ public class Menu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Invoke("MainMenuDelayed", 2f);
-    }
-
-    void MainMenuDelayed()
-    {
-     SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
    
    public void Quit()

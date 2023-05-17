@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class OverTweenUI : MonoBehaviour
 {
     [SerializeField] GameObject blurImage, blackBGOver, strip, MainMenu, restartButton, returnButton,
-    stripShadow, scoreBox, scoreTxt, scoreValue, highScoreBox, highScoreTxt, highScoreValue, star1, star2, star3, lightBlur, rayWheel;
-    
+    stripShadow, scoreBox, scoreTxt, scoreValue, star1, star2, star3, lightBlur, rayWheel;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -15,7 +14,7 @@ public class OverTweenUI : MonoBehaviour
         LeanTween.alpha(blurImage.GetComponent<RectTransform>(), 1f, 2f);
         LeanTween.alpha(blackBGOver.GetComponent<RectTransform>(), 0.8f, 3f);
         LeanTween.scale(strip, new Vector3(1.0f, 1.0f, 1.0f),2f).setDelay(.5f).setEase(LeanTweenType.easeOutElastic).setOnComplete(LevelOnComplete);
-        LeanTween.moveLocal(strip, new Vector3(0f, 820f, 0f),2f).setDelay(2f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.moveLocal(strip, new Vector3(0f, 625f, 0f),2f).setDelay(2f).setEase(LeanTweenType.easeInOutCubic);
     }
 
     void LevelOnComplete()
@@ -27,9 +26,6 @@ public class OverTweenUI : MonoBehaviour
         LeanTween.alpha(scoreBox.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
         LeanTween.alpha(scoreValue.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
         LeanTween.alpha(stripShadow.GetComponent<RectTransform>(), 1f, 3f).setDelay(1.5f);
-        LeanTween.alpha(highScoreBox.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
-        LeanTween.scale(highScoreTxt, new Vector3(1f, 1f, 1f), 2f).setDelay(2.5f).setEase(LeanTweenType.easeOutElastic);
-        LeanTween.alpha(highScoreValue.GetComponent<RectTransform>(), 1f, 1.5f).setDelay(2.5f);
     }
 
     void StarsAnimation()

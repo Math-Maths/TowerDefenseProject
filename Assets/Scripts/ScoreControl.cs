@@ -15,31 +15,10 @@ public static class ScoreControl
         set
         {
             score = value;
-            {
-            if (score < 0)
+            if (score < 0){
                 score = 0;
             }
-            if (score > HighScore)
-            {
-                HighScore = score;
-            }
             //Debug.Log("Pontuação atualizada para:" + Score);
-        }
-    }
-
-    public static int HighScore
-    {
-        get
-        {
-            int highScore = PlayerPrefs.GetInt("highScore", 0);
-            return highScore;
-        }
-        set
-        {
-            if (value > HighScore)
-            {
-                PlayerPrefs.SetInt("highScore", value);
-            }
         }
     }
 }
