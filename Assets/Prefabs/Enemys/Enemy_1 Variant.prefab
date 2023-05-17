@@ -271,4 +271,3 @@ MonoBehaviour:
   stopDistance: 10
   projectileShooter: {fileID: 0}
   cannon: {fileID: 1026520204}
-  shateredEnemy: {fileID: 8681182011444029646, guid: 55533960a68422849a820a303c13579a, type: 3}
