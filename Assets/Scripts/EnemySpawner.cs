@@ -5,6 +5,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
     public float minDistance = 10.0f;
     public float spawnDelay = 1.0f;
+    public float minSpawnDelay = 1.0f;
+    public float descreaseDelayAmount = .02f;
     public float maxX = 10.0f;
     public float maxZ = 10.0f;
     public Transform projectileShooter;
@@ -20,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
     {
         timeUntilNextSpawn -= Time.deltaTime;
 
-        if (timeUntilNextSpawn <= 0)
+        if (timeUntilNextSpawn <= 0 && GameManager.instance.IsGameRunning)
         {
             SpawnEnemy();
         }
@@ -51,7 +53,13 @@ public class EnemySpawner : MonoBehaviour
             // Definir o projectile shooter como alvo do inimigo
             Enemy enemyScript = enemy.GetComponent<Enemy>();
             enemyScript.projectileShooter = projectileShooter;
+            
             timeUntilNextSpawn = spawnDelay;
+        }
+
+        if(spawnDelay > minSpawnDelay)
+        {
+            spawnDelay -= descreaseDelayAmount;
         }
     }
 }

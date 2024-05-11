@@ -19,7 +19,7 @@ public class ProjectileShooter : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time > lastFireTime + fireDelay)
+        if (Input.GetMouseButtonDown(0) && Time.time > lastFireTime + fireDelay && GameManager.instance.IsGameRunning)
         {
             ShootProjectile();
             lastFireTime = Time.time;

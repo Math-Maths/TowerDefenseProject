@@ -24,7 +24,7 @@ public class EnemyShooter : MonoBehaviour
         if (target != null && canShoot)
         {
             // Verificar a distância entre o enemy e o projectile shooter            
-            if (Time.time > lastShotTime + shootingDelay)
+            if (Time.time > lastShotTime + shootingDelay && GameManager.instance.IsGameRunning)
             {
                 // Criar o tiro e apontá-lo para o projectile shooter
                 GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);

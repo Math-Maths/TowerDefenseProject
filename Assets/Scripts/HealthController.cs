@@ -28,6 +28,7 @@ public class HealthController : MonoBehaviour
         
         if (currentHealth <= 0)
         {
+            GameManager.instance.GameState(false);
             currentHealth = 0;
             // Chama a tela de GameOver com base no tempo definido.
             Invoke("ActiveGameOver", DelayGameOver);

@@ -1,3 +1,7 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,8 +30,11 @@ public class Menu : MonoBehaviour
    
    public void Quit()
    {
-        Debug.Log("Sair do jogo");
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else 
         Application.Quit();
+#endif
    }
 
    public void OpenOptions()
